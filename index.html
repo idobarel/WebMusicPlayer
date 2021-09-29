@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="referrer" content="strict-origin" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <title>Music Player</title>
+</head>
+<body>
+    <div class="bg-modal">
+        <div class="modal-content">
+            <button class="close-btn">+</button>
+            <p class='modal-title'>Song Upload</p>
+                <input type="text" class="song-input-name" id='files-name' name="song_name" placeholder="Enter song name"><br>
+                <input type="file" id='actual-btn' name='actual-btn'accept='.mp3' hidden>
+                <label for="actual-btn">Choose A Song File</label><br><br>
+                <span id="file-chosen">No file chosen</span><br>
+                <input type="file" name='img-upload' id='img-upload' accept=".jpg" hidden><br>
+                <label for="img-upload">Choose An PNG File</label><br><br>
+                <span id="img-chosen">No file chosen</span><br><br>
+                <button onclick="addItem();" id='song-upload-btn'>Upload!</button>
+            </form>
+        </div>
+    </div>
+    <h1>Music Player</h1>
+
+    <div class="music-container">
+        <div class="music-info">
+            <h4 id="title">OK.</h4>
+            <div class="progress-container">
+                <div class="progress"></div>
+            </div>
+        </div>
+        <div class="vol-container">
+            <div class="vol-progress"></div>
+        </div>
+        <audio src="music/Ok-RobinSchulz_Slowed.mp3" id='audio'></audio>
+        <div class="img-container">
+            <img src='images/RobinSchulzOKCover.jpg' alt='music-cover'
+            id='cover'>
+        </div>
+        <div class="navigation">
+            <button id="prev" class="action-btn">
+                <i class="fas fa-backward"></i>
+            </button>
+            <button id="play" class="action-btn action-btn-big">
+                <i class="fas fa-play"></i>
+            </button>
+            <button id="next" class="action-btn">
+                <i class="fas fa-forward"></i>
+            </button>
+        </div>
+    </div>
+
+    <button class='upload-btn' id='upload-btn'>
+        <i class="fa fa-upload" aria-hidden="true"></i>
+    </button>
+
+    <script src="script.js"></script>
+    <script src="https://kit.fontawesome.com/170af26f79.js" crossorigin="anonymous"></script>
+</body>
+</html>
